@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  booking-service:
+    build: ./booking-service
+    container_name: booking-service
+    depends_on:
+      - mongo
+    ports:
+      - "50051:50051"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+    networks:
+      - coworking-net
+
+  space-service:
+    build: ./space-service
+    container_name: space-service
+    depends_on:
+      - mongo
+      - nats
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+    networks:
+      - coworking-net
+
+  user-service:
+    build: ./user-service
+    container_name: user-service
+    depends_on:
+      - mongo
+    ports:
+      - "50052:50052"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+    networks:
+      - coworking-net
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - user-service
+      - booking-service
+    networks:
+      - coworking-net
+
+
+volumes:
+  mongo_data:
+
+networks:
+  coworking-net:
+
+nats:
+  image: nats
+  ports:
+    - "4222:4222"
+  networks:
+    - coworking-net
+
