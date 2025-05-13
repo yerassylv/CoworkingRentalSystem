@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"log"
-	"space-service/infrastructure/nats"
-	"space-service/infrastructure/repository"
+	snats "space-service/internal/infrastructure/nats"
+	"space-service/internal/infrastructure/repository"
 	"space-service/internal/usecase"
 	"time"
 
@@ -31,8 +31,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	nats.SubscribeToBookingCreated(natsConn, useCase.HandleBooking)
+	snats.SubscribeToBookingCreated(natsConn, useCase.HandleBooking)
 
 	log.Println("Space service is listening to booking.created events...")
-	select {} // block forever
 }

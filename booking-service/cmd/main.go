@@ -2,7 +2,7 @@ package main
 
 import (
 	"booking-service/internal/infrastructure/repository"
-	"booking-service/internal/transport/grpc"
+	Yerassylgrpc "booking-service/internal/transport/grpc"
 	"booking-service/internal/usecase"
 	pb "booking-service/proto"
 	"context"
@@ -23,7 +23,7 @@ func main() {
 	col := mongoClient.Database("coworking").Collection("bookings")
 	repo := repository.NewBookingRepo(col)
 	useCase := usecase.NewBookingUseCase(repo)
-	handler := grpc.NewBookingHandler(useCase)
+	handler := Yerassylgrpc.NewBookingHandler(useCase)
 
 	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {

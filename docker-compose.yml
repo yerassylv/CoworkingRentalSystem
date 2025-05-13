@@ -14,8 +14,6 @@ services:
     container_name: booking-service
     depends_on:
       - mongo
-    ports:
-      - "50051:50051"
     environment:
       - MONGO_URI=mongodb://mongo:27017
     networks:
@@ -37,8 +35,6 @@ services:
     container_name: user-service
     depends_on:
       - mongo
-    ports:
-      - "50052:50052"
     environment:
       - MONGO_URI=mongodb://mongo:27017
     networks:
@@ -55,6 +51,14 @@ services:
     networks:
       - coworking-net
 
+  nats:
+    image: nats
+    ports:
+      - "4222:4222"
+    networks:
+      - coworking-net
+
+
 
 volumes:
   mongo_data:
@@ -62,10 +66,4 @@ volumes:
 networks:
   coworking-net:
 
-nats:
-  image: nats
-  ports:
-    - "4222:4222"
-  networks:
-    - coworking-net
 

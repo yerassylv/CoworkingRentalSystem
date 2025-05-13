@@ -13,3 +13,5 @@ COPY . .
 RUN go build -o space-service ./cmd/main.go
 
 CMD ["./space-service"]
+
+# vetka sozdana

@@ -5,15 +5,16 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"user-service/infrastructure/repository"
+	"user-service/internal/infrastructure/repository"
+	tgrpc "user-service/internal/transport/grpc"
 	"user-service/internal/usecase"
-	"user-service/transport/grpc"
 
 	pb "user-service/proto"
 
+	"google.golang.org/grpc"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"google.golang.org/grpc"
 )
 
 func main() {
@@ -25,7 +26,7 @@ func main() {
 	col := client.Database("coworking").Collection("users")
 	repo := repository.NewMongoRepo(col)
 	uc := usecase.NewUserUseCase(repo)
-	handler := grpc.NewUserHandler(uc)
+	handler := tgrpc.NewUserHandler(uc)
 
 	lis, err := net.Listen("tcp", ":50052")
 	if err != nil {
