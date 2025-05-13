@@ -1,6 +1,6 @@
 # Dockerfile — space-service
 
-FROM golang:1.21-alpine
+FROM golang:1.24
 
 WORKDIR /app
 
