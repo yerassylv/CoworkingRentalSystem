@@ -1,0 +1,21 @@
+ syntax = "proto3";
+
+package space;
+
+option go_package = "space/proto;spacepb";
+
+service SpaceService {
+  rpc GetSpaceByID(GetSpaceByIDRequest) returns (GetSpaceByIDResponse);
+}
+
+message GetSpaceByIDRequest {
+  string space_id = 1;
+}
+
+message GetSpaceByIDResponse {
+  string space_id = 1;
+  string name = 2;
+  string location = 3;
+  int32 capacity = 4;
+  bool available = 5;
+}

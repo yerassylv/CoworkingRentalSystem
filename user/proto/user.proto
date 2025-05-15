@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "user/proto;userpb";
+
+service UserService {
+  rpc GetUserProfile(GetUserProfileRequest) returns (GetUserProfileResponse);
+}
+
+message GetUserProfileRequest {
+  string user_id = 1;
+}
+
+message GetUserProfileResponse {
+  string user_id = 1;
+  string full_name = 2;
+  string email = 3;
+  string phone = 4;
+}

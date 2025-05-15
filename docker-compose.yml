@@ -1,69 +1,69 @@
+# File: docker-compose.yml
 version: '3.8'
 
 services:
-  mongo:
-    image: mongo
-    container_name: mongo
+  user:
+    build: ./user
     ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-
-  booking-service:
-    build: ./booking-service
-    container_name: booking-service
+      - "50051:50051"
     depends_on:
       - mongo
+      - redis
     environment:
       - MONGO_URI=mongodb://mongo:27017
-    networks:
-      - coworking-net
+      - REDIS_ADDR=redis:6379
 
-  space-service:
-    build: ./space-service
-    container_name: space-service
+  space:
+    build: ./space
+    ports:
+      - "50052:50052"
     depends_on:
       - mongo
+      - redis
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - REDIS_ADDR=redis:6379
+
+  booking:
+    build: ./booking
+    ports:
+      - "50053:50053"
+    depends_on:
+      - mongo
+      - redis
       - nats
     environment:
       - MONGO_URI=mongodb://mongo:27017
-    networks:
-      - coworking-net
-
-  user-service:
-    build: ./user-service
-    container_name: user-service
-    depends_on:
-      - mongo
-    environment:
-      - MONGO_URI=mongodb://mongo:27017
-    networks:
-      - coworking-net
+      - REDIS_ADDR=redis:6379
+      - NATS_URL=nats://nats:4222
 
   api-gateway:
     build: ./api-gateway
-    container_name: api-gateway
     ports:
       - "8080:8080"
     depends_on:
-      - user-service
-      - booking-service
-    networks:
-      - coworking-net
+      - user
+      - space
+      - booking
+
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
 
   nats:
-    image: nats
+    image: nats:2.9
     ports:
       - "4222:4222"
-    networks:
-      - coworking-net
-
-
+      - "8222:8222"
 
 volumes:
-  mongo_data:
-
-networks:
-  coworking-net:
-
-
+  mongo-data:
+е
