@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GoORMHelperCache">
+    <option name="schemaMapping">
+      <map>
+        <entry key="Booking">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/internal/entity/booking.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BookingHandler">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/internal/transport/grpc/booking_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BookingInfo">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BookingMongoRepository">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/internal/repository/booking_mongo.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="BookingUseCase">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/internal/usecase/booking_usecase.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CreateBookingRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CreateBookingResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetSpaceByIDRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space.pb.go" />
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetSpaceByIDResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space.pb.go" />
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetUserProfileRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetUserProfileResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetUserRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user-service/proto/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetUserResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user-service/proto/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ListBookingsRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ListBookingsResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RedisCache">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/internal/repository/booking_cache.go" />
+              <option value="file://$PROJECT_DIR$/space/internal/repository/space_cache.go" />
+              <option value="file://$PROJECT_DIR$/user/internal/repository/user_cache.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Space">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/internal/entity/space.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="SpaceHandler">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/internal/transport/grpc/space_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="SpaceMongoRepository">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/internal/repository/space_mongo.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="SpaceUseCase">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/internal/usecase/space_usecase.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UnimplementedBookingServiceServer">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UnimplementedSpaceServiceServer">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UnimplementedUserServiceServer">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/internal/entity/user.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UserHandler">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/internal/transport/grpc/user_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UserMongoRepository">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/internal/repository/user_mongo.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UserUseCase">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/internal/usecase/user_usecase.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="bookingServiceClient">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="spaceServiceClient">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="userServiceClient">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go" />
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="x">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space.pb.go" />
+              <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/proto/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go" />
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="scannedPathMapping">
+      <map>
+        <entry key="file://$PROJECT_DIR$/api-gateway/cmd/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810112" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810116" />
+              <option name="schema">
+                <list>
+                  <option value="CreateBookingRequest" />
+                  <option value="CreateBookingResponse" />
+                  <option value="ListBookingsRequest" />
+                  <option value="BookingInfo" />
+                  <option value="ListBookingsResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/api-gateway/proto/gen/booking/booking_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810116" />
+              <option name="schema">
+                <list>
+                  <option value="bookingServiceClient" />
+                  <option value="UnimplementedBookingServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810116" />
+              <option name="schema">
+                <list>
+                  <option value="GetSpaceByIDRequest" />
+                  <option value="GetSpaceByIDResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/api-gateway/proto/gen/space/space_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810117" />
+              <option name="schema">
+                <list>
+                  <option value="spaceServiceClient" />
+                  <option value="UnimplementedSpaceServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810117" />
+              <option name="schema">
+                <list>
+                  <option value="GetUserProfileRequest" />
+                  <option value="GetUserProfileResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810118" />
+              <option name="schema">
+                <list>
+                  <option value="userServiceClient" />
+                  <option value="UnimplementedUserServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/cmd/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810122" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/internal/entity/booking.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810123" />
+              <option name="schema">
+                <list>
+                  <option value="Booking" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/internal/repository/booking_cache.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810125" />
+              <option name="schema">
+                <list>
+                  <option value="RedisCache" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/internal/repository/booking_mongo.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810125" />
+              <option name="schema">
+                <list>
+                  <option value="BookingMongoRepository" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/internal/transport/grpc/booking_handler.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810126" />
+              <option name="schema">
+                <list>
+                  <option value="BookingHandler" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/internal/usecase/booking_usecase.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810127" />
+              <option name="schema">
+                <list>
+                  <option value="BookingUseCase" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810129" />
+              <option name="schema">
+                <list>
+                  <option value="CreateBookingRequest" />
+                  <option value="CreateBookingResponse" />
+                  <option value="ListBookingsRequest" />
+                  <option value="BookingInfo" />
+                  <option value="ListBookingsResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/booking/proto/gen/booking_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810129" />
+              <option name="schema">
+                <list>
+                  <option value="bookingServiceClient" />
+                  <option value="UnimplementedBookingServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/cmd/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810131" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/internal/entity/space.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810133" />
+              <option name="schema">
+                <list>
+                  <option value="Space" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/internal/repository/space_cache.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810133" />
+              <option name="schema">
+                <list>
+                  <option value="RedisCache" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/internal/repository/space_mongo.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810134" />
+              <option name="schema">
+                <list>
+                  <option value="SpaceMongoRepository" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/internal/transport/grpc/space_handler.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810135" />
+              <option name="schema">
+                <list>
+                  <option value="SpaceHandler" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/internal/usecase/space_usecase.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810136" />
+              <option name="schema">
+                <list>
+                  <option value="SpaceUseCase" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/proto/gen/space.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810138" />
+              <option name="schema">
+                <list>
+                  <option value="GetSpaceByIDRequest" />
+                  <option value="GetSpaceByIDResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/space/proto/gen/space_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810139" />
+              <option name="schema">
+                <list>
+                  <option value="spaceServiceClient" />
+                  <option value="UnimplementedSpaceServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user-service/proto/user.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334886711" />
+              <option name="schema">
+                <list>
+                  <option value="GetUserRequest" />
+                  <option value="GetUserResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334886719" />
+              <option name="schema">
+                <list>
+                  <option value="userServiceClient" />
+                  <option value="UnimplementedUserServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334886730" />
+              <option name="schema">
+                <list>
+                  <option value="GetUserRequest" />
+                  <option value="GetUserResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334886739" />
+              <option name="schema">
+                <list>
+                  <option value="userServiceClient" />
+                  <option value="UnimplementedUserServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/cmd/main.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810141" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/internal/entity/user.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810143" />
+              <option name="schema">
+                <list>
+                  <option value="User" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/internal/repository/user_cache.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810144" />
+              <option name="schema">
+                <list>
+                  <option value="RedisCache" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/internal/repository/user_mongo.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810145" />
+              <option name="schema">
+                <list>
+                  <option value="UserMongoRepository" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/internal/transport/grpc/user_handler.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810147" />
+              <option name="schema">
+                <list>
+                  <option value="UserHandler" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/internal/usecase/user_usecase.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810147" />
+              <option name="schema">
+                <list>
+                  <option value="UserUseCase" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/proto/gen/user.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810149" />
+              <option name="schema">
+                <list>
+                  <option value="GetUserProfileRequest" />
+                  <option value="GetUserProfileResponse" />
+                  <option value="x" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747334810151" />
+              <option name="schema">
+                <list>
+                  <option value="userServiceClient" />
+                  <option value="UnimplementedUserServiceServer" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="tableStructMapping">
+      <map>
+        <entry key="booking" value="Booking" />
+        <entry key="booking_handler" value="BookingHandler" />
+        <entry key="booking_info" value="BookingInfo" />
+        <entry key="booking_mongo_repository" value="BookingMongoRepository" />
+        <entry key="booking_service_client" value="bookingServiceClient" />
+        <entry key="booking_use_case" value="BookingUseCase" />
+        <entry key="create_booking_request" value="CreateBookingRequest" />
+        <entry key="create_booking_response" value="CreateBookingResponse" />
+        <entry key="get_space_by_id_request" value="GetSpaceByIDRequest" />
+        <entry key="get_space_by_id_response" value="GetSpaceByIDResponse" />
+        <entry key="get_user_profile_request" value="GetUserProfileRequest" />
+        <entry key="get_user_profile_response" value="GetUserProfileResponse" />
+        <entry key="get_user_request" value="GetUserRequest" />
+        <entry key="get_user_response" value="GetUserResponse" />
+        <entry key="list_bookings_request" value="ListBookingsRequest" />
+        <entry key="list_bookings_response" value="ListBookingsResponse" />
+        <entry key="redis_cache" value="RedisCache" />
+        <entry key="space" value="Space" />
+        <entry key="space_handler" value="SpaceHandler" />
+        <entry key="space_mongo_repository" value="SpaceMongoRepository" />
+        <entry key="space_service_client" value="spaceServiceClient" />
+        <entry key="space_use_case" value="SpaceUseCase" />
+        <entry key="unimplemented_booking_service_server" value="UnimplementedBookingServiceServer" />
+        <entry key="unimplemented_space_service_server" value="UnimplementedSpaceServiceServer" />
+        <entry key="unimplemented_user_service_server" value="UnimplementedUserServiceServer" />
+        <entry key="user" value="User" />
+        <entry key="user_handler" value="UserHandler" />
+        <entry key="user_mongo_repository" value="UserMongoRepository" />
+        <entry key="user_service_client" value="userServiceClient" />
+        <entry key="user_use_case" value="UserUseCase" />
+        <entry key="x" value="x" />
+      </map>
+    </option>
+    <option name="lastTimeChecked" value="1747335111308" />
+  </component>
+</project>
