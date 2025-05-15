@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"user/internal/repository"
-	"user/internal/transport/grpc"
+	Yerassyl "user/internal/transport/grpc"
 	"user/internal/usecase"
 
-	pb "user/proto"
+	pb "user/proto/gen"
 
 	"github.com/go-redis/redis/v8"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -33,7 +33,7 @@ func main() {
 	cache := repository.NewRedisCache(redisClient, time.Minute*10)
 	uc := usecase.NewUserUseCase(repo, cache)
 	grpcServer := grpc.NewServer()
-	pb.RegisterUserServiceServer(grpcServer, grpc.NewUserHandler(uc))
+	pb.RegisterUserServiceServer(grpcServer, Yerassyl.NewUserHandler(uc))
 
 	listener, err := net.Listen("tcp", ":50051")
 	if err != nil {

@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"user/internal/usecase"
-	pb "user/proto"
+	pb "user/proto/gen"
 )
 
 type UserHandler struct {

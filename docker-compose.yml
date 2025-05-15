@@ -66,4 +66,3 @@ services:
 
 volumes:
   mongo-data:
-е

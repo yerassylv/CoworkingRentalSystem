@@ -6,7 +6,7 @@ import (
 	"context"
 	"log"
 
-	pb "booking/proto"
+	pb "booking/proto/gen"
 )
 
 type BookingHandler struct {

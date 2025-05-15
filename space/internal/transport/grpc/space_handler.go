@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"space/internal/usecase"
-	pb "space/proto"
+	pb "space/proto/gen"
 )
 
 type SpaceHandler struct {

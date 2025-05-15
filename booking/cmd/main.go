@@ -2,14 +2,14 @@ package main
 
 import (
 	"booking/internal/repository"
-	"booking/internal/transport/grpc"
+	Yerassylgrpc "booking/internal/transport/grpc"
 	"booking/internal/usecase"
 	"context"
 	"log"
 	"net"
 	"time"
 
-	pb "booking/proto"
+	pb "booking/proto/gen"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/nats-io/nats.go"
@@ -38,7 +38,7 @@ func main() {
 	cache := repository.NewRedisCache(redisClient, time.Minute*10)
 	uc := usecase.NewBookingUseCase(repo, cache, nc)
 	grpcServer := grpc.NewServer()
-	pb.RegisterBookingServiceServer(grpcServer, grpc.NewBookingHandler(uc))
+	pb.RegisterBookingServiceServer(grpcServer, Yerassylgrpc.NewBookingHandler(uc))
 
 	listener, err := net.Listen("tcp", ":50053")
 	if err != nil {
