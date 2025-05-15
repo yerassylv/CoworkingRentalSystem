@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package booking;
+
+option go_package = "booking/proto;bookingpb";
+
+service BookingService {
+  rpc CreateBooking(CreateBookingRequest) returns (CreateBookingResponse);
+  rpc ListBookings(ListBookingsRequest) returns (ListBookingsResponse);
+}
+
+message CreateBookingRequest {
+  string booking_id = 1;
+  string user_id = 2;
+  string space_id = 3;
+  string date = 4;
+}
+
+message CreateBookingResponse {
+  string status = 1;
+}
+
+message ListBookingsRequest {
+  string user_id = 1;
+}
+
+message BookingInfo {
+  string booking_id = 1;
+  string space_id = 2;
+  string date = 3;
+}
+
+message ListBookingsResponse {
+  repeated BookingInfo bookings = 1;
+}
