@@ -1,9 +1,10 @@
-# File: docker-compose.yml
 version: '3.8'
 
 services:
   user:
-    build: ./user
+    build:
+      context: user 
+      dockerfile: Dockerfile
     ports:
       - "50051:50051"
     depends_on:
@@ -14,7 +15,9 @@ services:
       - REDIS_ADDR=redis:6379
 
   space:
-    build: ./space
+    build:
+      context: space
+      dockerfile: Dockerfile
     ports:
       - "50052:50052"
     depends_on:
@@ -25,7 +28,9 @@ services:
       - REDIS_ADDR=redis:6379
 
   booking:
-    build: ./booking
+    build:
+      context: booking
+      dockerfile: Dockerfile
     ports:
       - "50053:50053"
     depends_on:
@@ -38,7 +43,9 @@ services:
       - NATS_URL=nats://nats:4222
 
   api-gateway:
-    build: ./api-gateway
+    build:
+      context: api-gateway
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:

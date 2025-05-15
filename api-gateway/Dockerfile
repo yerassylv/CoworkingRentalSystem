@@ -1,5 +1,4 @@
-# File: api-gateway/Dockerfile
-FROM golang:1.24
+FROM golang:1.24.2 AS builder
 
 WORKDIR /app
 COPY . .
@@ -7,8 +6,7 @@ COPY . .
 RUN go mod tidy
 RUN go build -o api-gateway ./cmd/main.go
 
-# ---
-FROM gcr.io/distroless/base-debian11
+FROM gcr.io/distroless/static
 
 WORKDIR /app
 COPY --from=builder /app/api-gateway /app/api-gateway
