@@ -55,6 +55,34 @@
             </set>
           </value>
         </entry>
+        <entry key="CreateSpaceRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CreateSpaceResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="DeleteSpaceRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="DeleteSpaceResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="GetSpaceByIDRequest">
           <value>
             <set>
@@ -119,6 +147,34 @@
             </set>
           </value>
         </entry>
+        <entry key="ListSpacesRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="ListSpacesResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LoginUserRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LoginUserResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="RedisCache">
           <value>
             <set>
@@ -128,10 +184,25 @@
             </set>
           </value>
         </entry>
+        <entry key="RegisterUserRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RegisterUserResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="Space">
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/space/internal/entity/space.go" />
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
             </set>
           </value>
         </entry>
@@ -179,6 +250,20 @@
               <option value="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go" />
               <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go" />
               <option value="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UpdateSpaceRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UpdateSpaceResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
             </set>
           </value>
         </entry>
@@ -476,7 +561,7 @@
         <entry key="file://$PROJECT_DIR$/space/internal/repository/space_mongo.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810134" />
+              <option name="lastModified" value="1747377083924" />
               <option name="schema">
                 <list>
                   <option value="SpaceMongoRepository" />
@@ -488,7 +573,7 @@
         <entry key="file://$PROJECT_DIR$/space/internal/transport/grpc/space_handler.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810135" />
+              <option name="lastModified" value="1747377232992" />
               <option name="schema">
                 <list>
                   <option value="SpaceHandler" />
@@ -500,7 +585,7 @@
         <entry key="file://$PROJECT_DIR$/space/internal/usecase/space_usecase.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810136" />
+              <option name="lastModified" value="1747377094998" />
               <option name="schema">
                 <list>
                   <option value="SpaceUseCase" />
@@ -512,11 +597,20 @@
         <entry key="file://$PROJECT_DIR$/space/proto/gen/space.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810138" />
+              <option name="lastModified" value="1747377690899" />
               <option name="schema">
                 <list>
+                  <option value="Space" />
                   <option value="GetSpaceByIDRequest" />
                   <option value="GetSpaceByIDResponse" />
+                  <option value="CreateSpaceRequest" />
+                  <option value="CreateSpaceResponse" />
+                  <option value="UpdateSpaceRequest" />
+                  <option value="UpdateSpaceResponse" />
+                  <option value="DeleteSpaceRequest" />
+                  <option value="DeleteSpaceResponse" />
+                  <option value="ListSpacesRequest" />
+                  <option value="ListSpacesResponse" />
                   <option value="x" />
                 </list>
               </option>
@@ -526,7 +620,7 @@
         <entry key="file://$PROJECT_DIR$/space/proto/gen/space_grpc.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810139" />
+              <option name="lastModified" value="1747377690881" />
               <option name="schema">
                 <list>
                   <option value="spaceServiceClient" />
@@ -593,14 +687,14 @@
         <entry key="file://$PROJECT_DIR$/user/cmd/main.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810141" />
+              <option name="lastModified" value="1747348214279" />
             </ScannedPath>
           </value>
         </entry>
         <entry key="file://$PROJECT_DIR$/user/internal/entity/user.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810143" />
+              <option name="lastModified" value="1747345966356" />
               <option name="schema">
                 <list>
                   <option value="User" />
@@ -624,7 +718,7 @@
         <entry key="file://$PROJECT_DIR$/user/internal/repository/user_mongo.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810145" />
+              <option name="lastModified" value="1747345977570" />
               <option name="schema">
                 <list>
                   <option value="UserMongoRepository" />
@@ -636,7 +730,7 @@
         <entry key="file://$PROJECT_DIR$/user/internal/transport/grpc/user_handler.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810147" />
+              <option name="lastModified" value="1747346014994" />
               <option name="schema">
                 <list>
                   <option value="UserHandler" />
@@ -648,7 +742,7 @@
         <entry key="file://$PROJECT_DIR$/user/internal/usecase/user_usecase.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810147" />
+              <option name="lastModified" value="1747345990002" />
               <option name="schema">
                 <list>
                   <option value="UserUseCase" />
@@ -660,11 +754,15 @@
         <entry key="file://$PROJECT_DIR$/user/proto/gen/user.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810149" />
+              <option name="lastModified" value="1747346615786" />
               <option name="schema">
                 <list>
                   <option value="GetUserProfileRequest" />
                   <option value="GetUserProfileResponse" />
+                  <option value="RegisterUserRequest" />
+                  <option value="RegisterUserResponse" />
+                  <option value="LoginUserRequest" />
+                  <option value="LoginUserResponse" />
                   <option value="x" />
                 </list>
               </option>
@@ -674,7 +772,7 @@
         <entry key="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810151" />
+              <option name="lastModified" value="1747346615776" />
               <option name="schema">
                 <list>
                   <option value="userServiceClient" />
@@ -696,6 +794,10 @@
         <entry key="booking_use_case" value="BookingUseCase" />
         <entry key="create_booking_request" value="CreateBookingRequest" />
         <entry key="create_booking_response" value="CreateBookingResponse" />
+        <entry key="create_space_request" value="CreateSpaceRequest" />
+        <entry key="create_space_response" value="CreateSpaceResponse" />
+        <entry key="delete_space_request" value="DeleteSpaceRequest" />
+        <entry key="delete_space_response" value="DeleteSpaceResponse" />
         <entry key="get_space_by_id_request" value="GetSpaceByIDRequest" />
         <entry key="get_space_by_id_response" value="GetSpaceByIDResponse" />
         <entry key="get_user_profile_request" value="GetUserProfileRequest" />
@@ -704,7 +806,13 @@
         <entry key="get_user_response" value="GetUserResponse" />
         <entry key="list_bookings_request" value="ListBookingsRequest" />
         <entry key="list_bookings_response" value="ListBookingsResponse" />
+        <entry key="list_spaces_request" value="ListSpacesRequest" />
+        <entry key="list_spaces_response" value="ListSpacesResponse" />
+        <entry key="login_user_request" value="LoginUserRequest" />
+        <entry key="login_user_response" value="LoginUserResponse" />
         <entry key="redis_cache" value="RedisCache" />
+        <entry key="register_user_request" value="RegisterUserRequest" />
+        <entry key="register_user_response" value="RegisterUserResponse" />
         <entry key="space" value="Space" />
         <entry key="space_handler" value="SpaceHandler" />
         <entry key="space_mongo_repository" value="SpaceMongoRepository" />
@@ -713,6 +821,8 @@
         <entry key="unimplemented_booking_service_server" value="UnimplementedBookingServiceServer" />
         <entry key="unimplemented_space_service_server" value="UnimplementedSpaceServiceServer" />
         <entry key="unimplemented_user_service_server" value="UnimplementedUserServiceServer" />
+        <entry key="update_space_request" value="UpdateSpaceRequest" />
+        <entry key="update_space_response" value="UpdateSpaceResponse" />
         <entry key="user" value="User" />
         <entry key="user_handler" value="UserHandler" />
         <entry key="user_mongo_repository" value="UserMongoRepository" />

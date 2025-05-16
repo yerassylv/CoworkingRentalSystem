@@ -29,3 +29,21 @@ func (r *UserMongoRepository) GetUserByID(ctx context.Context, userID string) (*
 	}
 	return &user, nil
 }
+
+func (r *UserMongoRepository) GetUserByEmail(ctx context.Context, email string) (*entity.User, error) {
+	filter := bson.M{"email": email}
+	var user entity.User
+	err := r.collection.FindOne(ctx, filter).Decode(&user)
+	if err != nil {
+		if errors.Is(err, mongo.ErrNoDocuments) {
+			return nil, nil
+		}
+		return nil, err
+	}
+	return &user, nil
+}
+
+func (r *UserMongoRepository) CreateUser(ctx context.Context, user *entity.User) error {
+	_, err := r.collection.InsertOne(ctx, user)
+	return err
+}

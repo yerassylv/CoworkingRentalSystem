@@ -33,3 +33,31 @@ func (h *UserHandler) GetUserProfile(ctx context.Context, req *pb.GetUserProfile
 		Phone:    user.Phone,
 	}, nil
 }
+
+func (h *UserHandler) RegisterUser(ctx context.Context, req *pb.RegisterUserRequest) (*pb.RegisterUserResponse, error) {
+	user, err := h.uc.RegisterUser(ctx, req.GetFullName(), req.GetEmail(), req.GetPhone(), req.GetPassword())
+	if err != nil {
+		log.Printf("failed to register user: %v", err)
+		return nil, err
+	}
+
+	return &pb.RegisterUserResponse{
+		UserId: user.UserID,
+	}, nil
+}
+
+func (h *UserHandler) LoginUser(ctx context.Context, req *pb.LoginUserRequest) (*pb.LoginUserResponse, error) {
+	token, user, err := h.uc.LoginUser(ctx, req.GetEmail(), req.GetPassword())
+	if err != nil {
+		log.Printf("failed to login user: %v", err)
+		return nil, err
+	}
+
+	return &pb.LoginUserResponse{
+		Token:    token,
+		UserId:   user.UserID,
+		FullName: user.FullName,
+		Email:    user.Email,
+		Phone:    user.Phone,
+	}, nil
+}

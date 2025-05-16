@@ -21,6 +21,7 @@ import (
 func main() {
 	ctx := context.Background()
 	mongoClient, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://mongo:27017"))
+
 	if err != nil {
 		log.Fatalf("Mongo connection failed: %v", err)
 	}
