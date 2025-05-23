@@ -7,11 +7,15 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o space-service ./cmd
+# Сборка двух бинарников: gRPC и NATS consumer
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o space-service ./cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o space-nats-consumer ./cmd/nats_consumer.go
 
 FROM gcr.io/distroless/static
 
 WORKDIR /app
 COPY --from=builder /app/space-service /app/space-service
+COPY --from=builder /app/space-nats-consumer /app/space-nats-consumer
 
+# По умолчанию запускаем gRPC
 CMD ["/app/space-service"]

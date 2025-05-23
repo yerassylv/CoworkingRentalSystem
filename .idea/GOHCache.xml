@@ -10,6 +10,13 @@
             </set>
           </value>
         </entry>
+        <entry key="BookingCreatedEvent">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/space/cmd/nats_consumer.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="BookingHandler">
           <value>
             <set>
@@ -112,22 +119,6 @@
             <set>
               <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user.pb.go" />
               <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
-            </set>
-          </value>
-        </entry>
-        <entry key="GetUserRequest">
-          <value>
-            <set>
-              <option value="file://$PROJECT_DIR$/user-service/proto/user.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go" />
-            </set>
-          </value>
-        </entry>
-        <entry key="GetUserResponse">
-          <value>
-            <set>
-              <option value="file://$PROJECT_DIR$/user-service/proto/user.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go" />
             </set>
           </value>
         </entry>
@@ -247,8 +238,6 @@
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user_grpc.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go" />
               <option value="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go" />
             </set>
           </value>
@@ -315,8 +304,6 @@
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user_grpc.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go" />
               <option value="file://$PROJECT_DIR$/user/proto/gen/user_grpc.pb.go" />
             </set>
           </value>
@@ -329,8 +316,6 @@
               <option value="file://$PROJECT_DIR$/api-gateway/proto/gen/user/user.pb.go" />
               <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
               <option value="file://$PROJECT_DIR$/space/proto/gen/space.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/proto/user.pb.go" />
-              <option value="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go" />
               <option value="file://$PROJECT_DIR$/user/proto/gen/user.pb.go" />
             </set>
           </value>
@@ -534,6 +519,18 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/space/cmd/nats_consumer.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1747472719921" />
+              <option name="schema">
+                <list>
+                  <option value="BookingCreatedEvent" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/space/internal/entity/space.go">
           <value>
             <ScannedPath>
@@ -630,64 +627,10 @@
             </ScannedPath>
           </value>
         </entry>
-        <entry key="file://$PROJECT_DIR$/user-service/proto/user.pb.go">
-          <value>
-            <ScannedPath>
-              <option name="lastModified" value="1747334886711" />
-              <option name="schema">
-                <list>
-                  <option value="GetUserRequest" />
-                  <option value="GetUserResponse" />
-                  <option value="x" />
-                </list>
-              </option>
-            </ScannedPath>
-          </value>
-        </entry>
-        <entry key="file://$PROJECT_DIR$/user-service/proto/user_grpc.pb.go">
-          <value>
-            <ScannedPath>
-              <option name="lastModified" value="1747334886719" />
-              <option name="schema">
-                <list>
-                  <option value="userServiceClient" />
-                  <option value="UnimplementedUserServiceServer" />
-                </list>
-              </option>
-            </ScannedPath>
-          </value>
-        </entry>
-        <entry key="file://$PROJECT_DIR$/user-service/user-service/proto/user.pb.go">
-          <value>
-            <ScannedPath>
-              <option name="lastModified" value="1747334886730" />
-              <option name="schema">
-                <list>
-                  <option value="GetUserRequest" />
-                  <option value="GetUserResponse" />
-                  <option value="x" />
-                </list>
-              </option>
-            </ScannedPath>
-          </value>
-        </entry>
-        <entry key="file://$PROJECT_DIR$/user-service/user-service/proto/user_grpc.pb.go">
-          <value>
-            <ScannedPath>
-              <option name="lastModified" value="1747334886739" />
-              <option name="schema">
-                <list>
-                  <option value="userServiceClient" />
-                  <option value="UnimplementedUserServiceServer" />
-                </list>
-              </option>
-            </ScannedPath>
-          </value>
-        </entry>
         <entry key="file://$PROJECT_DIR$/user/cmd/main.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747348214279" />
+              <option name="lastModified" value="1747475412258" />
             </ScannedPath>
           </value>
         </entry>
@@ -742,7 +685,7 @@
         <entry key="file://$PROJECT_DIR$/user/internal/usecase/user_usecase.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747345990002" />
+              <option name="lastModified" value="1747478629924" />
               <option name="schema">
                 <list>
                   <option value="UserUseCase" />
@@ -787,6 +730,7 @@
     <option name="tableStructMapping">
       <map>
         <entry key="booking" value="Booking" />
+        <entry key="booking_created_event" value="BookingCreatedEvent" />
         <entry key="booking_handler" value="BookingHandler" />
         <entry key="booking_info" value="BookingInfo" />
         <entry key="booking_mongo_repository" value="BookingMongoRepository" />
@@ -802,8 +746,6 @@
         <entry key="get_space_by_id_response" value="GetSpaceByIDResponse" />
         <entry key="get_user_profile_request" value="GetUserProfileRequest" />
         <entry key="get_user_profile_response" value="GetUserProfileResponse" />
-        <entry key="get_user_request" value="GetUserRequest" />
-        <entry key="get_user_response" value="GetUserResponse" />
         <entry key="list_bookings_request" value="ListBookingsRequest" />
         <entry key="list_bookings_response" value="ListBookingsResponse" />
         <entry key="list_spaces_request" value="ListSpacesRequest" />
@@ -831,6 +773,6 @@
         <entry key="x" value="x" />
       </map>
     </option>
-    <option name="lastTimeChecked" value="1747335111308" />
+    <option name="lastTimeChecked" value="1747980242169" />
   </component>
 </project>

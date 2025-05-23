@@ -3,6 +3,7 @@ package usecase
 import (
 	"context"
 	"errors"
+	"log"
 	"time"
 	"user/internal/entity"
 
@@ -13,7 +14,7 @@ import (
 
 var (
 	ErrInvalidCredentials = errors.New("invalid email or password")
-	jwtSecret             = []byte("your_secret_key") // Замени на настоящий секрет
+	jwtSecret             = []byte("your_secret_key") // Замени на секрет из .env или config
 )
 
 type UserRepository interface {
@@ -40,18 +41,28 @@ func NewUserUseCase(r UserRepository, c UserCache) *UserUseCase {
 func (uc *UserUseCase) GetUserProfile(ctx context.Context, userID string) (*entity.User, error) {
 	user, err := uc.cache.GetUserProfile(ctx, userID)
 	if err != nil {
+		log.Printf("❌ Error reading from cache for user %s: %v", userID, err)
 		return nil, err
 	}
 	if user != nil {
+		log.Printf("✅ Cache HIT for user: %s", userID)
 		return user, nil
 	}
 
+	log.Printf("🔍 Cache MISS for user: %s", userID)
+
 	user, err = uc.repo.GetUserByID(ctx, userID)
 	if err != nil {
+		log.Printf("❌ Error reading from Mongo for user %s: %v", userID, err)
 		return nil, err
 	}
 	if user != nil {
-		_ = uc.cache.SetUserProfile(ctx, user) // Ignore cache error
+		err := uc.cache.SetUserProfile(ctx, user)
+		if err != nil {
+			log.Printf("⚠️ Failed to write to cache for user %s: %v", userID, err)
+		} else {
+			log.Printf("💾 User %s cached", userID)
+		}
 	}
 	return user, nil
 }
@@ -75,6 +86,7 @@ func (uc *UserUseCase) RegisterUser(ctx context.Context, fullName, email, phone,
 		return nil, err
 	}
 
+	log.Printf("👤 User registered: %s", user.UserID)
 	return user, nil
 }
 
@@ -92,11 +104,10 @@ func (uc *UserUseCase) LoginUser(ctx context.Context, email, password string) (s
 		return "", nil, ErrInvalidCredentials
 	}
 
-	// Генерация JWT токена
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"user_id":  user.UserID,
 		"email":    user.Email,
-		"exp":      time.Now().Add(time.Hour * 24).Unix(), // токен на 24 часа
+		"exp":      time.Now().Add(time.Hour * 24).Unix(),
 		"issuedAt": time.Now().Unix(),
 	})
 
@@ -105,5 +116,6 @@ func (uc *UserUseCase) LoginUser(ctx context.Context, email, password string) (s
 		return "", nil, err
 	}
 
+	log.Printf("🔐 User logged in: %s", user.UserID)
 	return tokenString, user, nil
 }

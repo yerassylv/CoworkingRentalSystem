@@ -3,7 +3,7 @@ version: '3.8'
 services:
   user:
     build:
-      context: user 
+      context: user
       dockerfile: Dockerfile
     ports:
       - "50051:50051"
@@ -23,6 +23,19 @@ services:
     depends_on:
       - mongo
       - redis
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - REDIS_ADDR=redis:6379
+
+  space-nats-consumer:
+    build:
+      context: space
+      dockerfile: Dockerfile
+    command: ["/app/space-nats-consumer"]
+    depends_on:
+      - mongo
+      - redis
+      - nats
     environment:
       - MONGO_URI=mongodb://mongo:27017
       - REDIS_ADDR=redis:6379
