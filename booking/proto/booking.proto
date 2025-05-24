@@ -7,6 +7,8 @@ option go_package = "booking/proto;bookingpb";
 service BookingService {
   rpc CreateBooking(CreateBookingRequest) returns (CreateBookingResponse);
   rpc ListBookings(ListBookingsRequest) returns (ListBookingsResponse);
+  rpc GetBookingByID(GetBookingByIDRequest) returns (GetBookingByIDResponse);
+
 }
 
 message CreateBookingRequest {
@@ -34,3 +36,15 @@ message BookingInfo {
 message ListBookingsResponse {
   repeated BookingInfo bookings = 1;
 }
+ message GetBookingByIDRequest {
+   string booking_id = 1;
+ }
+
+ message GetBookingByIDResponse {
+   string booking_id = 1;
+   string user_id = 2;
+   string space_id = 3;
+   string date = 4;
+   string email = 5;
+ }
+

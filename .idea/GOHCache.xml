@@ -90,6 +90,20 @@
             </set>
           </value>
         </entry>
+        <entry key="GetBookingByIDRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="GetBookingByIDResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="GetSpaceByIDRequest">
           <value>
             <set>
@@ -468,7 +482,7 @@
         <entry key="file://$PROJECT_DIR$/booking/internal/repository/booking_mongo.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1747334810125" />
+              <option name="lastModified" value="1748122809157" />
               <option name="schema">
                 <list>
                   <option value="BookingMongoRepository" />
@@ -480,7 +494,7 @@
         <entry key="file://$PROJECT_DIR$/booking/internal/transport/grpc/booking_handler.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748117627680" />
+              <option name="lastModified" value="1748122199957" />
               <option name="schema">
                 <list>
                   <option value="BookingHandler" />
@@ -492,7 +506,7 @@
         <entry key="file://$PROJECT_DIR$/booking/internal/usecase/booking_usecase.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748118695872" />
+              <option name="lastModified" value="1748122878775" />
               <option name="schema">
                 <list>
                   <option value="BookingUseCase" />
@@ -504,7 +518,7 @@
         <entry key="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748118018365" />
+              <option name="lastModified" value="1748122115849" />
               <option name="schema">
                 <list>
                   <option value="CreateBookingRequest" />
@@ -512,6 +526,8 @@
                   <option value="ListBookingsRequest" />
                   <option value="BookingInfo" />
                   <option value="ListBookingsResponse" />
+                  <option value="GetBookingByIDRequest" />
+                  <option value="GetBookingByIDResponse" />
                   <option value="x" />
                 </list>
               </option>
@@ -521,7 +537,7 @@
         <entry key="file://$PROJECT_DIR$/booking/proto/gen/booking_grpc.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748118018354" />
+              <option name="lastModified" value="1748122115864" />
               <option name="schema">
                 <list>
                   <option value="bookingServiceClient" />
@@ -761,6 +777,8 @@
         <entry key="create_space_response" value="CreateSpaceResponse" />
         <entry key="delete_space_request" value="DeleteSpaceRequest" />
         <entry key="delete_space_response" value="DeleteSpaceResponse" />
+        <entry key="get_booking_by_id_request" value="GetBookingByIDRequest" />
+        <entry key="get_booking_by_id_response" value="GetBookingByIDResponse" />
         <entry key="get_space_by_id_request" value="GetSpaceByIDRequest" />
         <entry key="get_space_by_id_response" value="GetSpaceByIDResponse" />
         <entry key="get_user_profile_request" value="GetUserProfileRequest" />

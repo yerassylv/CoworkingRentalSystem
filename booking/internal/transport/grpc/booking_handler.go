@@ -51,3 +51,19 @@ func (h *BookingHandler) ListBookings(ctx context.Context, req *pb.ListBookingsR
 	}
 	return &pb.ListBookingsResponse{Bookings: out}, nil
 }
+
+func (h *BookingHandler) GetBookingByID(ctx context.Context, req *pb.GetBookingByIDRequest) (*pb.GetBookingByIDResponse, error) {
+	booking, err := h.uc.GetBookingByID(ctx, req.GetBookingId())
+	if err != nil {
+		log.Printf("failed to get booking by ID: %v", err)
+		return nil, err
+	}
+
+	return &pb.GetBookingByIDResponse{
+		BookingId: booking.BookingID,
+		UserId:    booking.UserID,
+		SpaceId:   booking.SpaceID,
+		Date:      booking.Date,
+		Email:     booking.Email,
+	}, nil
+}

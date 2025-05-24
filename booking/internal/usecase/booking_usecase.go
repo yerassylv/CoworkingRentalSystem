@@ -13,6 +13,7 @@ import (
 type BookingRepository interface {
 	CreateBooking(ctx context.Context, booking *entity.Booking) error
 	ListBookings(ctx context.Context, userID string) ([]*entity.Booking, error)
+	GetBookingByID(ctx context.Context, bookingID string) (*entity.Booking, error)
 }
 
 type BookingCache interface {
@@ -38,20 +39,16 @@ func NewBookingUseCase(r BookingRepository, c BookingCache, nc *nats.Conn, m ema
 }
 
 func (uc *BookingUseCase) CreateBooking(ctx context.Context, booking *entity.Booking) error {
-	// Save booking to repository
 	err := uc.repo.CreateBooking(ctx, booking)
 	if err != nil {
 		return err
 	}
 
-	// Invalidate user's booking cache
 	_ = uc.cache.InvalidateBookings(ctx, booking.UserID)
 
-	// Publish booking created event to NATS
 	payload, _ := json.Marshal(booking)
 	_ = uc.nats.Publish("booking.created", payload)
 
-	// Send confirmation email to the user's email
 	_ = uc.mailer.Send(
 		booking.Email,
 		"Booking Confirmed",
@@ -77,4 +74,8 @@ func (uc *BookingUseCase) ListBookings(ctx context.Context, userID string) ([]*e
 
 	_ = uc.cache.SetBookings(ctx, userID, bookings)
 	return bookings, nil
+}
+
+func (uc *BookingUseCase) GetBookingByID(ctx context.Context, bookingID string) (*entity.Booking, error) {
+	return uc.repo.GetBookingByID(ctx, bookingID)
 }
