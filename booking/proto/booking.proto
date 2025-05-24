@@ -14,6 +14,7 @@ message CreateBookingRequest {
   string user_id = 2;
   string space_id = 3;
   string date = 4;
+  string email = 5;
 }
 
 message CreateBookingResponse {

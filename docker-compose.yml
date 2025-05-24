@@ -54,6 +54,10 @@ services:
       - MONGO_URI=mongodb://mongo:27017
       - REDIS_ADDR=redis:6379
       - NATS_URL=nats://nats:4222
+    env_file:
+      - ./booking/.env
+    volumes:
+      - ./booking/.env:/app/.env
 
   api-gateway:
     build:

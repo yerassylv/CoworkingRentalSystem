@@ -24,11 +24,14 @@ func (h *BookingHandler) CreateBooking(ctx context.Context, req *pb.CreateBookin
 		UserID:    req.GetUserId(),
 		SpaceID:   req.GetSpaceId(),
 		Date:      req.GetDate(),
+		Email:     req.GetEmail(),
 	}
+
 	if err := h.uc.CreateBooking(ctx, booking); err != nil {
 		log.Printf("failed to create booking: %v", err)
 		return nil, err
 	}
+
 	return &pb.CreateBookingResponse{Status: "created"}, nil
 }
 
