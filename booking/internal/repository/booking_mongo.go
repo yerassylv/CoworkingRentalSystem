@@ -51,3 +51,19 @@ func (r *BookingMongoRepository) GetBookingByID(ctx context.Context, bookingID s
 	}
 	return &booking, nil
 }
+
+func (r *BookingMongoRepository) CancelBooking(ctx context.Context, bookingID string) error {
+	filter := bson.M{"booking_id": bookingID}
+	update := bson.M{
+		"$set": bson.M{
+			"status": "cancelled",
+		},
+	}
+
+	_, err := r.collection.UpdateOne(ctx, filter, update)
+	if err != nil {
+		return fmt.Errorf("failed to cancel booking: %w", err)
+	}
+
+	return nil
+}

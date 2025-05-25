@@ -8,6 +8,7 @@ service BookingService {
   rpc CreateBooking(CreateBookingRequest) returns (CreateBookingResponse);
   rpc ListBookings(ListBookingsRequest) returns (ListBookingsResponse);
   rpc GetBookingByID(GetBookingByIDRequest) returns (GetBookingByIDResponse);
+  rpc CancelBooking(CancelBookingRequest) returns (CancelBookingResponse);
 
 }
 
@@ -46,5 +47,14 @@ message ListBookingsResponse {
    string space_id = 3;
    string date = 4;
    string email = 5;
+   string status = 6;
  }
+ message CancelBookingRequest {
+   string booking_id = 1;
+ }
+
+ message CancelBookingResponse {
+   string status = 1;
+ }
+
 

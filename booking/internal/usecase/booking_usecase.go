@@ -14,6 +14,7 @@ type BookingRepository interface {
 	CreateBooking(ctx context.Context, booking *entity.Booking) error
 	ListBookings(ctx context.Context, userID string) ([]*entity.Booking, error)
 	GetBookingByID(ctx context.Context, bookingID string) (*entity.Booking, error)
+	CancelBooking(ctx context.Context, bookingID string) error // ✅ добавлено
 }
 
 type BookingCache interface {
@@ -78,4 +79,15 @@ func (uc *BookingUseCase) ListBookings(ctx context.Context, userID string) ([]*e
 
 func (uc *BookingUseCase) GetBookingByID(ctx context.Context, bookingID string) (*entity.Booking, error) {
 	return uc.repo.GetBookingByID(ctx, bookingID)
+}
+
+func (uc *BookingUseCase) CancelBooking(ctx context.Context, bookingID string) error {
+	err := uc.repo.CancelBooking(ctx, bookingID)
+	if err != nil {
+		return fmt.Errorf("failed to cancel booking: %w", err)
+	}
+
+	_ = uc.cache.InvalidateBookings(ctx, "") // можно указать userID, если знаешь его
+
+	return nil
 }

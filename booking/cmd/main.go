@@ -5,6 +5,7 @@ import (
 	"booking/internal/repository"
 	Yerassylgrpc "booking/internal/transport/grpc"
 	"booking/internal/usecase"
+	pb "booking/proto/gen"
 	"context"
 	"log"
 	"net"
@@ -18,8 +19,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"google.golang.org/grpc"
-
-	pb "booking/proto/gen"
 )
 
 func main() {

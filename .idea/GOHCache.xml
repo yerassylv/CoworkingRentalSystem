@@ -46,6 +46,20 @@
             </set>
           </value>
         </entry>
+        <entry key="CancelBookingRequest">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="CancelBookingResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="CreateBookingRequest">
           <value>
             <set>
@@ -439,14 +453,14 @@
         <entry key="file://$PROJECT_DIR$/booking/cmd/main.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748117397716" />
+              <option name="lastModified" value="1748173582442" />
             </ScannedPath>
           </value>
         </entry>
         <entry key="file://$PROJECT_DIR$/booking/internal/entity/booking.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748117569723" />
+              <option name="lastModified" value="1748174168971" />
               <option name="schema">
                 <list>
                   <option value="Booking" />
@@ -482,7 +496,7 @@
         <entry key="file://$PROJECT_DIR$/booking/internal/repository/booking_mongo.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748122809157" />
+              <option name="lastModified" value="1748174178613" />
               <option name="schema">
                 <list>
                   <option value="BookingMongoRepository" />
@@ -494,7 +508,7 @@
         <entry key="file://$PROJECT_DIR$/booking/internal/transport/grpc/booking_handler.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748122199957" />
+              <option name="lastModified" value="1748175398632" />
               <option name="schema">
                 <list>
                   <option value="BookingHandler" />
@@ -506,7 +520,7 @@
         <entry key="file://$PROJECT_DIR$/booking/internal/usecase/booking_usecase.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748122878775" />
+              <option name="lastModified" value="1748174066764" />
               <option name="schema">
                 <list>
                   <option value="BookingUseCase" />
@@ -518,7 +532,7 @@
         <entry key="file://$PROJECT_DIR$/booking/proto/gen/booking.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748122115849" />
+              <option name="lastModified" value="1748175393962" />
               <option name="schema">
                 <list>
                   <option value="CreateBookingRequest" />
@@ -528,6 +542,8 @@
                   <option value="ListBookingsResponse" />
                   <option value="GetBookingByIDRequest" />
                   <option value="GetBookingByIDResponse" />
+                  <option value="CancelBookingRequest" />
+                  <option value="CancelBookingResponse" />
                   <option value="x" />
                 </list>
               </option>
@@ -537,7 +553,7 @@
         <entry key="file://$PROJECT_DIR$/booking/proto/gen/booking_grpc.pb.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1748122115864" />
+              <option name="lastModified" value="1748175393973" />
               <option name="schema">
                 <list>
                   <option value="bookingServiceClient" />
@@ -771,6 +787,8 @@
         <entry key="booking_mongo_repository" value="BookingMongoRepository" />
         <entry key="booking_service_client" value="bookingServiceClient" />
         <entry key="booking_use_case" value="BookingUseCase" />
+        <entry key="cancel_booking_request" value="CancelBookingRequest" />
+        <entry key="cancel_booking_response" value="CancelBookingResponse" />
         <entry key="create_booking_request" value="CreateBookingRequest" />
         <entry key="create_booking_response" value="CreateBookingResponse" />
         <entry key="create_space_request" value="CreateSpaceRequest" />
