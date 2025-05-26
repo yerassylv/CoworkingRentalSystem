@@ -80,7 +80,7 @@ Tests planned to be added soon.
 
 ---
 ## 📬 Authors
-- Bolatkan Yerassyl (yerassylv)
-- Salimgerey Yerassyl (Kampo77)
+- Yerassyl Bolatkan (yerassylv)
+- Yerassyl Salimgerey (Kampo77)
  
 
